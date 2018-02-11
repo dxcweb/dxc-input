@@ -1,8 +1,9 @@
 import * as React from 'react';
 import ContainerProps from './ContainerProps';
+import { normalize } from './normalize';
 
 export interface InputProps extends ContainerProps {
-  normalize: () => void;
+  normalize: normalize;
   maxLength: number;
   value: string;
   onChange: () => void;
