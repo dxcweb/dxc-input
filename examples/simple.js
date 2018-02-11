@@ -30,6 +30,7 @@ class Simple extends Component {
         <div style={{ margin: 20 }}>更多</div>
         <Input width={200} label="label" labelWidth={50} placeholder="啊啊啊" />
         <Select width={200} label="label" labelWidth={50} data={data} placeholder="啊啊啊" cols={1} />
+        <Input width={200} label="label" labelWidth={50} placeholder="啊啊啊" />
       </div>
     );
   }

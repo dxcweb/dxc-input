@@ -17,7 +17,7 @@ export default class Select extends Component {
     const value = this.getValue();
     let newStyle;
     if (width) {
-      newStyle = { marginBottom: 10, ...style, width };
+      newStyle = { ...style, width };
     } else {
       newStyle = style;
     }
