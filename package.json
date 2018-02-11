@@ -1,15 +1,10 @@
 {
   "name": "dxc-input",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "react各种H5输入框",
-  "keywords": [
-    "react",
-    "input"
-  ],
+  "keywords": ["react", "input"],
   "homepage": "https://github.com/dxcweb/dxc-input",
-  "maitainers": [
-    "605863278@qq.com"
-  ],
+  "maitainers": ["605863278@qq.com"],
   "repository": {
     "type": "git",
     "url": "https://github.com/dxcweb/dxc-input.git"
@@ -33,13 +28,9 @@
   },
   "dependencies": {
     "antd-mobile": "^2.1.5",
-    "fs-flex": "^0.2.0"
+    "dxc-flex": "^1.0.1"
   },
-  "files": [
-    "assets",
-    "examples",
-    "lib",
-    "src"
-  ],
+  "typings": "./typings/index.d.ts",
+  "files": ["assets", "examples", "lib", "src", "typings"],
   "main": "./lib"
 }

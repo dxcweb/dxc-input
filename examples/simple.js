@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Input, normalize, Select } from 'dxc-input'
-import Block from 'fs-flex'
+import { Input, normalize, Select } from 'dxc-input';
 
 class Simple extends Component {
   state = {
-    value: ''
+    value: '',
   };
 
-  onChange = (value) => {
+  onChange = value => {
     this.setState({ value });
-  }
+  };
   render() {
     const data = [
       {
@@ -24,14 +23,14 @@ class Simple extends Component {
     ];
     const { value } = this.state;
     return (
-      <Block p={20}>
-        <Block m={20}>简单的</Block>
-        <Input width={200} normalize={normalize.money} />
-        <Select width={200} data={data} cols={1} />
-        <Block m={20}>更多</Block>
+      <div style={{ padding: 20 }}>
+        <div style={{ margin: 20 }}>简单的</div>
+        <Input className="ccc" style={{ padding: 20, width: 100 }} width={200} normalize={normalize.money} />
+        <Select className="ccc" style={{ padding: 20, width: 100 }} width={200} width={200} data={data} cols={1} />
+        <div style={{ margin: 20 }}>更多</div>
         <Input width={200} label="label" labelWidth={50} placeholder="啊啊啊" />
         <Select width={200} label="label" labelWidth={50} data={data} placeholder="啊啊啊" cols={1} />
-      </Block>
+      </div>
     );
   }
 }

@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
-import Block from 'fs-flex';
-import '../../assets/base.less'
+import Block from 'dxc-flex';
+import '../../assets/base.less';
 
 export default class Container extends Component {
-    render() {
-        const { label, labelWidth, width, children } = this.props;
-        return (
-            <Block w={width} hf className="dxc-input-container">
-                <Block w={labelWidth} a="c" j="e">
-                    {label}
-                </Block>
-                <Block hf f={1} className="dxc-input-box">
-                    {children}
-                </Block>
-            </Block>
-        );
+  render() {
+    const { className, label, labelWidth, width, children, style = {}, ...other } = this.props;
+    let newStyle;
+    if (width) {
+      newStyle = { ...style, width };
+    } else {
+      newStyle = style;
     }
+    let newClassName = 'dxc-input-container';
+    if (className) {
+      newClassName += ` ${className}`;
+    }
+    return (
+      <Block style={newStyle} {...other} className={newClassName}>
+        <Block style={{ width: labelWidth }} horizontal="center" vertical="center">
+          {label}
+        </Block>
+        <Block horizontal style={{ flex: 1 }} className="dxc-input-box">
+          {children}
+        </Block>
+      </Block>
+    );
+  }
 }
