@@ -1687,18 +1687,23 @@ var Container = function (_Component) {
       newClassName += ' ' + className;
     }
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_dxc_flex___default.a,
-      _extends({ style: newStyle }, other, { className: newClassName }),
+      'div',
+      null,
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_1_dxc_flex___default.a,
-        { style: { width: labelWidth }, horizontal: 'center', vertical: 'center' },
-        label
+        _extends({ style: newStyle }, other, { className: newClassName }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_dxc_flex___default.a,
+          { style: { width: labelWidth }, horizontal: 'center', vertical: 'center' },
+          label
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_dxc_flex___default.a,
+          { horizontal: true, style: { flex: 1 }, className: 'dxc-input-box' },
+          children
+        )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_dxc_flex___default.a,
-        { horizontal: true, style: { flex: 1 }, className: 'dxc-input-box' },
-        children
-      )
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { style: { height: 10 } })
     );
   };
 
