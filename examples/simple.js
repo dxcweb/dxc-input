@@ -2138,7 +2138,8 @@ var Simple = function (_Component) {
         '\u66F4\u591A'
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Input"], { width: 200, label: 'label', labelWidth: 50, placeholder: '\u554A\u554A\u554A' }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Select"], { width: 200, label: 'label', labelWidth: 50, data: data, placeholder: '\u554A\u554A\u554A', cols: 1 })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Select"], { width: 200, label: 'label', labelWidth: 50, data: data, placeholder: '\u554A\u554A\u554A', cols: 1 }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Input"], { width: 200, label: 'label', labelWidth: 50, placeholder: '\u554A\u554A\u554A' })
     );
   };
 
@@ -19678,7 +19679,7 @@ var Select = function (_Component) {
     var value = this.getValue();
     var newStyle = void 0;
     if (width) {
-      newStyle = _extends({ marginBottom: 10 }, style, { width: width });
+      newStyle = _extends({}, style, { width: width });
     } else {
       newStyle = style;
     }
