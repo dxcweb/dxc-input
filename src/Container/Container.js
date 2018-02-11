@@ -16,14 +16,17 @@ export default class Container extends Component {
       newClassName += ` ${className}`;
     }
     return (
-      <Block style={newStyle} {...other} className={newClassName}>
-        <Block style={{ width: labelWidth }} horizontal="center" vertical="center">
-          {label}
+      <div>
+        <Block style={newStyle} {...other} className={newClassName}>
+          <Block style={{ width: labelWidth }} horizontal="center" vertical="center">
+            {label}
+          </Block>
+          <Block horizontal style={{ flex: 1 }} className="dxc-input-box">
+            {children}
+          </Block>
         </Block>
-        <Block horizontal style={{ flex: 1 }} className="dxc-input-box">
-          {children}
-        </Block>
-      </Block>
+        <div style={{ height: 10 }} />
+      </div>
     );
   }
 }
