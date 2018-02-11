@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>simple.js - example - dxc-input@0.1.0</title>
+  <title>simple.js - example - dxc-input@0.1.1</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -263,7 +263,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 <body>
   <div class="container">
     <div class="header">
-      <h1>dxc-input@0.1.0</h1>
+      <h1>dxc-input@0.1.1</h1>
 
       <p>react各种H5输入框</p>
     </div>
@@ -271,17 +271,16 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 
     <div class="highlight"><pre><code language="js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 <span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
-<span class="hljs-keyword">import</span> { Input, normalize, Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'dxc-input'</span>
-<span class="hljs-keyword">import</span> Block <span class="hljs-keyword">from</span> <span class="hljs-string">'fs-flex'</span>
+<span class="hljs-keyword">import</span> { Input, normalize, Select } <span class="hljs-keyword">from</span> <span class="hljs-string">'dxc-input'</span>;
 
-class Simple extends Component {
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Simple</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
   state = {
-    value: <span class="hljs-string">''</span>
+    value: <span class="hljs-string">''</span>,
   };
 
-  onChange = (value) =&gt; {
+  onChange = value =&gt; {
     <span class="hljs-keyword">this</span>.setState({ value });
-  }
+  };
   render() {
     <span class="hljs-keyword">const</span> data = [
       {
@@ -295,14 +294,14 @@ class Simple extends Component {
     ];
     <span class="hljs-keyword">const</span> { value } = <span class="hljs-keyword">this</span>.state;
     <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Block</span> <span class="hljs-attribute">p</span>=<span class="hljs-value">{20}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Block</span> <span class="hljs-attribute">m</span>=<span class="hljs-value">{20}</span>&gt;</span>简单的<span class="hljs-tag">&lt;/<span class="hljs-title">Block</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{200}</span> <span class="hljs-attribute">normalize</span>=<span class="hljs-value">{normalize.money}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{200}</span> <span class="hljs-attribute">data</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">cols</span>=<span class="hljs-value">{1}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Block</span> <span class="hljs-attribute">m</span>=<span class="hljs-value">{20}</span>&gt;</span>更多<span class="hljs-tag">&lt;/<span class="hljs-title">Block</span>&gt;</span>
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">padding:</span> <span class="hljs-attribute">20</span> }}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">margin:</span> <span class="hljs-attribute">20</span> }}&gt;</span>简单的<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ccc"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">padding:</span> <span class="hljs-attribute">20</span>, <span class="hljs-attribute">width:</span> <span class="hljs-attribute">100</span> }} <span class="hljs-attribute">width</span>=<span class="hljs-value">{200}</span> <span class="hljs-attribute">normalize</span>=<span class="hljs-value">{normalize.money}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"ccc"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">padding:</span> <span class="hljs-attribute">20</span>, <span class="hljs-attribute">width:</span> <span class="hljs-attribute">100</span> }} <span class="hljs-attribute">width</span>=<span class="hljs-value">{200}</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{200}</span> <span class="hljs-attribute">data</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">cols</span>=<span class="hljs-value">{1}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">margin:</span> <span class="hljs-attribute">20</span> }}&gt;</span>更多<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Input</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{200}</span> <span class="hljs-attribute">label</span>=<span class="hljs-value">"label"</span> <span class="hljs-attribute">labelWidth</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"啊啊啊"</span> /&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">Select</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">{200}</span> <span class="hljs-attribute">label</span>=<span class="hljs-value">"label"</span> <span class="hljs-attribute">labelWidth</span>=<span class="hljs-value">{50}</span> <span class="hljs-attribute">data</span>=<span class="hljs-value">{data}</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"啊啊啊"</span> <span class="hljs-attribute">cols</span>=<span class="hljs-value">{1}</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">Block</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
   }
 }
