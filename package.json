@@ -17,7 +17,7 @@
     "build": "rc-tools run build",
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
-    "pub": "rc-tools run update-self && rc-tools run pub",
+    "pub": "rc-tools run pub",
     "lint": "rc-tools run lint",
     "prepublish": "rc-tools run guard"
   },
