@@ -14,9 +14,7 @@
   -webkit-flex-flow: row;
   -moz-flex-flow: row;
   -ms-flex-flow: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row;
+  flex-flow: row;
 }
 .block-vertical-layout {
   display: -webkit-box;
@@ -27,9 +25,7 @@
   -webkit-flex-flow: column;
   -moz-flex-flow: column;
   -ms-flex-flow: column;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column;
+  flex-flow: column;
 }
 .block-flow-layout {
   display: -webkit-box;
@@ -76,22 +72,19 @@
   -webkit-align-items: flex-start;
   -webkit-box-pack: start;
   -ms-flex-align: start;
-  -webkit-box-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 .block-align-center {
   -webkit-align-items: center;
   -webkit-box-pack: center;
   -ms-flex-align: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .block-align-end {
   -webkit-align-items: flex-end;
   -webkit-box-pack: end;
   -ms-flex-align: end;
-  -webkit-box-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 .dxc-input-container {
   color: #333333;
@@ -573,45 +566,25 @@ template {
 .am-fade-enter,
 .am-fade-appear {
   opacity: 0;
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
 }
 .am-fade-leave {
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
 }
 .am-fade-enter.am-fade-enter-active,
 .am-fade-appear.am-fade-appear-active {
-  -webkit-animation-name: amFadeIn;
-          animation-name: amFadeIn;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-name: amFadeIn;
+  animation-play-state: running;
 }
 .am-fade-leave.am-fade-leave-active {
-  -webkit-animation-name: amFadeOut;
-          animation-name: amFadeOut;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-@-webkit-keyframes amFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation-name: amFadeOut;
+  animation-play-state: running;
 }
 @keyframes amFadeIn {
   0% {
@@ -619,14 +592,6 @@ template {
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes amFadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes amFadeOut {
@@ -639,72 +604,39 @@ template {
 }
 .am-slide-up-enter,
 .am-slide-up-appear {
-  -webkit-transform: translate(0, 100%);
-          transform: translate(0, 100%);
+  transform: translate(0, 100%);
 }
 .am-slide-up-enter,
 .am-slide-up-appear,
 .am-slide-up-leave {
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
 }
 .am-slide-up-enter.am-slide-up-enter-active,
 .am-slide-up-appear.am-slide-up-appear-active {
-  -webkit-animation-name: amSlideUpIn;
-          animation-name: amSlideUpIn;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-name: amSlideUpIn;
+  animation-play-state: running;
 }
 .am-slide-up-leave.am-slide-up-leave-active {
-  -webkit-animation-name: amSlideUpOut;
-          animation-name: amSlideUpOut;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-@-webkit-keyframes amSlideUpIn {
-  0% {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
+  animation-name: amSlideUpOut;
+  animation-play-state: running;
 }
 @keyframes amSlideUpIn {
   0% {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
+    transform: translate(0, 100%);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-@-webkit-keyframes amSlideUpOut {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
+    transform: translate(0, 0);
   }
 }
 @keyframes amSlideUpOut {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   100% {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
+    transform: translate(0, 100%);
   }
 }
 .am.am-zoom-enter,
@@ -714,174 +646,87 @@ template {
 .am-zoom-enter,
 .am-zoom-appear {
   opacity: 0;
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-  -webkit-animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-          animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation-play-state: paused;
 }
 .am-zoom-leave {
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-  -webkit-animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
-          animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+  animation-play-state: paused;
 }
 .am-zoom-enter.am-zoom-enter-active,
 .am-zoom-appear.am-zoom-appear-active {
-  -webkit-animation-name: amZoomIn;
-          animation-name: amZoomIn;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-name: amZoomIn;
+  animation-play-state: running;
 }
 .am-zoom-leave.am-zoom-leave-active {
-  -webkit-animation-name: amZoomOut;
-          animation-name: amZoomOut;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-@-webkit-keyframes amZoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
+  animation-name: amZoomOut;
+  animation-play-state: running;
 }
 @keyframes amZoomIn {
   0% {
     opacity: 0;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-@-webkit-keyframes amZoomOut {
-  0% {
-    opacity: 1;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
   }
 }
 @keyframes amZoomOut {
   0% {
     opacity: 1;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
   }
   100% {
     opacity: 0;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
   }
 }
 .am-slide-down-enter,
 .am-slide-down-appear {
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+  transform: translate(0, -100%);
 }
 .am-slide-down-enter,
 .am-slide-down-appear,
 .am-slide-down-leave {
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
 }
 .am-slide-down-enter.am-slide-down-enter-active,
 .am-slide-down-appear.am-slide-down-appear-active {
-  -webkit-animation-name: amSlideDownIn;
-          animation-name: amSlideDownIn;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-name: amSlideDownIn;
+  animation-play-state: running;
 }
 .am-slide-down-leave.am-slide-down-leave-active {
-  -webkit-animation-name: amSlideDownOut;
-          animation-name: amSlideDownOut;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-@-webkit-keyframes amSlideDownIn {
-  0% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
+  animation-name: amSlideDownOut;
+  animation-play-state: running;
 }
 @keyframes amSlideDownIn {
   0% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
+    transform: translate(0, -100%);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-@-webkit-keyframes amSlideDownOut {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
+    transform: translate(0, 0);
   }
 }
 @keyframes amSlideDownOut {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   100% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
+    transform: translate(0, -100%);
   }
 }
 *,
@@ -974,16 +819,13 @@ a {
     left: 0;
     width: 100%;
     height: 1PX;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
+    transform-origin: 50% 50%;
+    transform: scaleY(0.5);
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 3), (min-resolution: 2dppx) and (min-resolution: 3dppx) {
   html:not([data-scale]) .am-picker-col-indicator::before {
-    -webkit-transform: scaleY(0.33);
-            transform: scaleY(0.33);
+    transform: scaleY(0.33);
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
@@ -1002,30 +844,24 @@ a {
     left: 0;
     width: 100%;
     height: 1PX;
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
+    transform-origin: 50% 100%;
+    transform: scaleY(0.5);
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 3), (min-resolution: 2dppx) and (min-resolution: 3dppx) {
   html:not([data-scale]) .am-picker-col-indicator::after {
-    -webkit-transform: scaleY(0.33);
-            transform: scaleY(0.33);
+    transform: scaleY(0.33);
   }
 }
 .am-picker {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .am-picker-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   text-align: center;
 }
 .am-picker-popup {
@@ -1034,6 +870,7 @@ a {
   position: fixed;
   width: 100%;
   background-color: #fff;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 .am-picker-popup-wrap {
   position: fixed;
@@ -1045,6 +882,7 @@ a {
   z-index: 1000;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+  transform: translateZ(1px);
 }
 .am-picker-popup-mask {
   position: fixed;
@@ -1055,6 +893,7 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   z-index: 1000;
+  transform: translateZ(1px);
 }
 .am-picker-popup-mask-hidden {
   display: none;
@@ -1065,12 +904,10 @@ a {
   background-position: bottom;
   background-size: 100% 1PX;
   background-repeat: no-repeat;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
   border-bottom: 1PX solid #ddd;
 }
@@ -1090,16 +927,13 @@ a {
     left: 0;
     width: 100%;
     height: 1PX;
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
+    transform-origin: 50% 100%;
+    transform: scaleY(0.5);
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 3), (min-resolution: 2dppx) and (min-resolution: 3dppx) {
   html:not([data-scale]) .am-picker-popup-header::after {
-    -webkit-transform: scaleY(0.33);
-            transform: scaleY(0.33);
+    transform: scaleY(0.33);
   }
 }
 .am-picker-popup-header .am-picker-popup-header-right {
@@ -1111,23 +945,19 @@ a {
   padding: 9px 15px;
   height: 42px;
   box-sizing: border-box;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .am-picker-popup-item-active {
   background-color: #ddd;
 }
 .am-picker-popup-title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   text-align: center;
   color: #000;
 }
@@ -1135,9 +965,8 @@ a {
   display: none;
 }
 .am-picker-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 /*# sourceMappingURL=simple.css.map*/
