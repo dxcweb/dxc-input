@@ -1263,7 +1263,7 @@ var Container = function (_Component) {
     }
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      null,
+      { style: { overflow: 'hidden' } },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_1_dxc_flex___default.a,
         _extends({ style: newStyle }, other, { className: newClassName }),
