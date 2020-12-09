@@ -1721,7 +1721,8 @@ var Simple = function (_Component) {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Input"], { width: 200, label: 'label', labelWidth: 50, placeholder: '\u554A\u554A\u554A' }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Select"], { width: 200, label: 'label', labelWidth: 50, data: data, placeholder: '\u554A\u554A\u554A', cols: 1 }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Input"], { width: 200, label: 'label', labelWidth: 50, placeholder: '\u554A\u554A\u554A' })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Input"], { width: 200, label: 'label', labelWidth: 50, placeholder: '\u554A\u554A\u554A' }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_dxc_input__["Input"], { disabled: true, value: 'aaa', width: 200, label: 'label', labelWidth: 50, placeholder: '\u554A\u554A\u554A' })
     );
   };
 
@@ -30385,14 +30386,15 @@ var Input = function (_Component) {
         maxLength = _props.maxLength,
         placeholder = _props.placeholder,
         onChange = _props.onChange,
-        other = _objectWithoutProperties(_props, ['normalize', 'label', 'labelWidth', 'width', 'maxLength', 'placeholder', 'onChange']);
+        disabled = _props.disabled,
+        other = _objectWithoutProperties(_props, ['normalize', 'label', 'labelWidth', 'width', 'maxLength', 'placeholder', 'onChange', 'disabled']);
 
     var containerProps = _extends({ label: label, labelWidth: labelWidth, width: width }, other);
     var value = this.getValue();
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1__Container_Container__["a" /* default */],
       containerProps,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onBlur: this.onBlur, style: { flex: 1 }, maxLength: maxLength, value: value, onChange: this.onChange, placeholder: placeholder })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { disabled: disabled, onBlur: this.onBlur, style: { flex: 1 }, maxLength: maxLength, value: value, onChange: this.onChange, placeholder: placeholder })
     );
   };
 
